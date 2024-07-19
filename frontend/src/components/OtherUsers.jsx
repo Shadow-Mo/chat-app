@@ -8,6 +8,11 @@ const OtherUsers = () => {
     // my custom hook
     useGetOtherUsers();
     const {otherUsers} = useSelector(store=>store.user);
+    const conslog = useSelector(store=>{
+        console.log(store);
+        return store;
+    });
+    
     if (!otherUsers) return; // early return in react
      
     return (

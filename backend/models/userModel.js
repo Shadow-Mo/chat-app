@@ -22,6 +22,7 @@ const userModel = new mongoose.Schema({
         type:String,
         enum:["male", "female"],
         required:true
-    }
+    },
+    isOnline: { type: Boolean, default: false },
 }, {timestamps:true});
 export const User = mongoose.model("User", userModel);
