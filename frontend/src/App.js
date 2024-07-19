@@ -19,10 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />
-  },{
-    path: "groupchat",
-    element: <GroupChat />
-  }
+  },
 ]);
 
 function App() {

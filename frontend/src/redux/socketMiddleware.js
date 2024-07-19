@@ -25,8 +25,8 @@ const socketMiddleware = store => next => action => {
         store.dispatch({ type: 'SET_ONLINE_USERS', payload: onlineUsers });
       });
 
-      socket.on('newMessage', (message) => {
-        store.dispatch({ type: 'NEW_MESSAGE', payload: message });
+      socket.on('sendMessage', (message) => {
+        store.dispatch({ type: 'newMessage', payload: message });
       });
 
       break;
