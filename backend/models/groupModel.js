@@ -18,8 +18,8 @@ const groupModel = new mongoose.Schema({
     },
     members:[{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"User"
-    }]
+       ref:"User"
+    }],
 }, {timestamps:true});
 
 export const Group = mongoose.model("Group", groupModel);
