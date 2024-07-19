@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from "react-redux";
+import OtherGroup from './OtherGroup';
 
 const Groups = () => {
     const { groups } = useSelector(store => store.user);
@@ -9,12 +10,11 @@ const Groups = () => {
     return (
         <div className='overflow-auto flex-1'>
             {
-                groups.map(group => (
-                    <div key={group._id} className='p-2 border-b border-gray-300'>
-                        <h3 className='text-lg font-semibold'>{group.name}</h3>
-                        <p>Members: {group.members.length}</p>
-                    </div>
-                ))
+                groups?.map((group)=>{
+                    return (
+                        <OtherGroup key={group._id} group={group}/>
+                    )
+                })
             }
         </div>
     )
